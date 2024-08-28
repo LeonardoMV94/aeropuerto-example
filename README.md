@@ -6,3 +6,5 @@
 - [Simone] Formulario de contacto
 - [Leonardo] Funcionalidades
 
+:white_check_mark:
+:x:
