@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (tipoVueloSelect.value === 'idaVuelta') {
           fechaVueltaInput.removeAttribute('disabled');
       } else {
-          fechaVueltaInput.setAttribute('disabled', 'disabled');
+          fechaVueltaInput.setAttribute('disabled', true);
       }
   });
 });
