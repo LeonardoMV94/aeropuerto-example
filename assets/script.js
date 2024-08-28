@@ -125,3 +125,18 @@ const randomIntFromInterval = (min, max) => {
 setInterval(() => {
   cambiarBodyTabla(vuelos);
 }, 3000);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const tipoVueloSelect = document.querySelector('#tipoVuelo');
+  const fechaVueltaInput = document.querySelector('#fechaVuelta');
+
+  // Al cambiar la opción en el select
+  tipoVueloSelect.addEventListener('change', function() {
+      if (tipoVueloSelect.value === 'idaVuelta') {
+          fechaVueltaInput.removeAttribute('disabled');
+      } else {
+          fechaVueltaInput.setAttribute('disabled', 'disabled');
+      }
+  });
+});
+
