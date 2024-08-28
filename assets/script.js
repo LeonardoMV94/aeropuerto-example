@@ -73,16 +73,43 @@ const cambiarBodyTabla = (vuelos) => {
   tbody.innerHTML = html.join("");
 };
 
+const coloresArray = [
+  "text-danger",
+  "text-primary",
+  "text-secondary",
+  "text-dark",
+];
+
+const obtenerColorSegunEstado = (estado) => {
+  switch (estado) {
+    case "A Tiempo":
+      return "text-success fw-bold";
+      break;
+    case "Abordando":
+      return " fw-bold";
+      break;
+    case "Retrasado":
+      return "text-warning fw-bold";
+      break;
+    case "Cancelado":
+      return "text-danger fw-bold";
+      break;
+    default:
+        return 'text-info'
+      break;
+  }
+};
+
 const getRowsTabla = (vuelos) => {
-    //const maxArray = vuelos.lenght -1
+  //const maxArray = vuelos.lenght -1
   const vuelosHtml = vuelos.map((vuelo, index, array) => {
     return `
     <tr>
         <td>${index}</td>
         <td>${vuelo.vuelo}</td>
-        <td>${array[randomIntFromInterval(0,8)].destino}</td>
-        <td>${array[randomIntFromInterval(0,8)].hora}</td>
-        <td>${array[randomIntFromInterval(0,8)].estado}</td>
+        <td>${array[randomIntFromInterval(0, 8)].destino}</td>
+        <td>${array[randomIntFromInterval(0, 8)].hora}</td>
+        <td class="${obtenerColorSegunEstado(vuelo.estado)}">${array[randomIntFromInterval(0, 8)].estado}</td>
         <td>${vuelo.puerta}</td>
     </tr>
 `;
@@ -96,5 +123,5 @@ const randomIntFromInterval = (min, max) => {
 };
 
 setInterval(() => {
-    cambiarBodyTabla(vuelos);
-}, 1000);
+  cambiarBodyTabla(vuelos);
+}, 3000);
