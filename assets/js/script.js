@@ -106,11 +106,11 @@ const getRowsTabla = (vuelos) => {
     return `
     <tr>
         <td>${index}</td>
-        <td>${vuelo.vuelo}</td>
+        <td>${array[randomIntFromInterval(0, 8)].vuelo}</td>
         <td>${array[randomIntFromInterval(0, 8)].destino}</td>
         <td>${array[randomIntFromInterval(0, 8)].hora}</td>
         <td class="${obtenerColorSegunEstado(vuelo.estado)}">${array[randomIntFromInterval(0, 8)].estado}</td>
-        <td>${vuelo.puerta}</td>
+        <td>${array[randomIntFromInterval(0, 8)].puerta}</td>
     </tr>
 `;
   });
