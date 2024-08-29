@@ -1,0 +1,30 @@
+.form-container {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background-color: #ffffff;
+}
+.tab-content {
+    margin-top: 1rem;
+}
+
+.card-text {
+  color: #051B54;
+  display: inline-block;
+}
+
+.compra-link {
+  color: #0099cc;
+  margin-top: 1rem;
+  display: block;
+}
+
+.form-select,
+.form-control {
+  color: #051B54;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+}
