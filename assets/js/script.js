@@ -106,11 +106,11 @@ const getRowsTabla = (vuelos) => {
     return `
     <tr>
         <td>${index}</td>
-        <td>${vuelo.vuelo}</td>
+        <td>${array[randomIntFromInterval(0, 8)].vuelo}</td>
         <td>${array[randomIntFromInterval(0, 8)].destino}</td>
         <td>${array[randomIntFromInterval(0, 8)].hora}</td>
         <td class="${obtenerColorSegunEstado(vuelo.estado)}">${array[randomIntFromInterval(0, 8)].estado}</td>
-        <td>${vuelo.puerta}</td>
+        <td>${array[randomIntFromInterval(0, 8)].puerta}</td>
     </tr>
 `;
   });
@@ -126,6 +126,38 @@ setInterval(() => {
   cambiarBodyTabla(vuelos);
 }, 3000);
 
+
+// Nueva funcionalidad para el formulario y el modal
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita el envío del formulario y el refresco de la página
+
+  // Mostrar el modal
+  let modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+  modal.show();
+
+  // Vaciar el formulario después de que el modal sea mostrado
+  this.reset();
+});
+
+
+// Nueva funcionalidad para el radio
+document.addEventListener('DOMContentLoaded', (event) => {
+  const radioButtons = document.querySelectorAll('input[type="radio"]');
+  
+  radioButtons.forEach(radio => {
+      radio.addEventListener('change', function() {
+          // Si el radio button ya está seleccionado, desmarcarlo
+          if (this.checked) {
+              // Desmarcar el radio button después de un pequeño retraso para permitir que el estado se actualice
+              setTimeout(() => {
+                  this.checked = false;
+              }, 0);
+          }
+      });
+  });
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const tipoVueloSelect = document.querySelector('#tipoVuelo');
   const fechaVueltaInput = document.querySelector('#fechaVuelta');
@@ -140,3 +172,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+// Nueva funcionalidad para el boton footer
+$(document).ready(function() {
+  $('a.arriba').on('click', function(e) {
+      e.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+      $('html, body').animate({
+          scrollTop: $($(this).attr('href')).offset().top
+      }, 800); // 800 milisegundos para un desplazamiento suave
+  });
+});
