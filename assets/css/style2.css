@@ -52,10 +52,38 @@ header {
     list-style: none; 
 }
 
+
 section {
-    background-color: #007bff; 
-    padding: 20px 0; 
+    
+    padding: 30px 0; 
     color: #ffffff; 
+    margin: 50px;
+    border-bottom: 100%;
+}
+.destino {
+    color: black;
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Righteous';
+    padding: 5px 0;
+    transition: color 0.3s, transform 0.3s; /* Añade una transición suave */
+}
+
+.destino:hover {
+    color: #007bff; /* Cambia el color cuando se pasa el cursor */
+    transform: scale(1.1); /* Agranda el texto un poco */
+}
+
+
+.carousel-container {
+    max-width: 900px; 
+    margin: 0 auto; 
+    position: relative;
+    background-color: #ffffff; 
+    border-radius: 30px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    overflow: hidden; 
+    
 }
 
 
@@ -66,13 +94,20 @@ section {
 
 
 .carousel-indicators button {
-    background-color: #ffffff; 
+    background-color: #007bff; 
+    border-radius: 50%; 
 }
 
 .carousel-indicators .active {
-    background-color: #d4d4d4; 
+    background-color: #ffffff; 
 }
 
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    border-radius: 5px; 
+}
 
 .carousel-caption h5 {
     font-size: 24px; 
@@ -88,17 +123,15 @@ section {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #ffffff; 
+    background-color: #007bff; 
     border-radius: 50%; 
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
-
 
 .carousel-control-prev {
     left: 10px; 
 }
-
 
 .carousel-control-next {
     right: 10px; 
