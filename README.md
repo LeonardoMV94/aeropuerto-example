@@ -5,7 +5,7 @@
 - [Simone]               Refactorizar css
 - [Yarira]               listado destino - origen from array
 - [Nicolas]              Estilo de destinos
-- [Leonardo]             Pull request -  validar formulario contacto
+- [Leonardo]             Pull request -  validar formulario contacto :white_check_mark:
 
 :white_check_mark:
 :x:

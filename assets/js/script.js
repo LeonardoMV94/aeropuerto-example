@@ -2,20 +2,32 @@
 // Nueva funcionalidad para el radio
 document.addEventListener("DOMContentLoaded", (event) => {
   const radioButtons = document.querySelectorAll('input[type="radio"]');
-  const btnEnviar = document.getElementById("btnEnviar");
-  const tipoVueloSelect = document.querySelector("#tipoVuelo");
+  const btnEnviar = document.querySelector('#btnEnviar')
+  //const tipoVueloSelect = document.querySelector("#tipoVuelo");
   const fechaVueltaInput = document.querySelector("#fechaVuelta");
 
-  
+  // inputs formulario
+  const usernameInput = document.querySelector('#username')
+  const telefonoInput = document.querySelector('#telefono')
+  const emailInput = document.querySelector('#email')
+  const messageInput = document.querySelector('#message')
 
-  // Al cambiar la opción en el select
-  tipoVueloSelect.addEventListener("change", function () {
-    if (tipoVueloSelect.value === "idaVuelta") {
-      fechaVueltaInput.removeAttribute("disabled");
-    } else {
-      fechaVueltaInput.setAttribute("disabled", true);
+  document.addEventListener('keyup', () => {
+    if(usernameInput.value != '' && telefonoInput.value != '' && emailInput.value != '' && messageInput.value != ''){
+      btnEnviar.disabled = false
+    } else {      
+      btnEnviar.disabled = true
     }
-  });
+  })
+
+  // // Al cambiar la opción en el select
+  // tipoVueloSelect.addEventListener("change", function () {
+  //   if (tipoVueloSelect.value === "idaVuelta") {
+  //     fechaVueltaInput.removeAttribute("disabled");
+  //   } else {
+  //     fechaVueltaInput.setAttribute("disabled", true);
+  //   }
+  // });
   radioButtons.forEach((radio) => {
     radio.addEventListener("change", function () {
       // Si el radio button ya está seleccionado, desmarcarlo
