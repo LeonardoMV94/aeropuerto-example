@@ -5,6 +5,7 @@
 - [Yarira] Formulario destinos de vuelos
 - [Simone] Formulario de contacto
 - [Leonardo] Funcionalidades
+- [Nicolas] Pagina 'opciones de vuelo'
 
 :white_check_mark:
 :x:
