@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -230,6 +231,90 @@ section {
     color: #007bff;
     transform: scale(1.1);
 }
+
+.cont-destino{
+    background-color: rgb(16, 0, 79);
+    color: #fff;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.cont-destino h5{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    pad: 20px 0;
+}
+
+.cont-destino p{
+    font-size: 13px;
+    text-align: center;
+    pad: 20px 0;
+    
+}
+
+.cont-destino .row .col{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cont-destino .card {
+    cursor: pointer;
+
+}
+
+.cont-destino .card img{
+    position: relative;
+    max-width: 340px;
+    height: 250px;
+   
+}
+
+.cont-destino .card-body{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: 'Righteous';
+    
+}
+
+.cont-destino .card-body h5 {
+    display: block;
+    margin-bottom: 20px;
+    background-color: n;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+.cont-destino .card-body p {
+    opacity: 0;
+    transition: opacity 1s ease;
+
+}
+.cont-destino .card-body:hover p {
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.cont-destino .card-body:hover{
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+}
+
+.cont-destino .card-body:hover h5 {
+    display: none;
+}
+
 
 /* Carousel */
 .carousel-container {
