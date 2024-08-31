@@ -70,17 +70,17 @@
 
 
             <label for="pasajeros">Cantidad de Pasajeros:</label>
-            <input type="number" id="pasajeros" name="pasajeros" min="1" value="1">
+            <input type="number" id="pasajeros" name="pasajeros" min="1" max="7" value="1">
 
             <label for="childrens">Cantidad de niños:</label>
-            <input type="number" id="childrens" name="childrens" min="1" value="1">
-
-            <label for="childrenAge">Edad del niño:</label>
-            <input type="number" id="childrenAge" name="childrenAge" min="1" value="1">
-
+            <input type="number" id="childrens" name="childrens" min="0" max="6" value="0">
+            <div id="ninosDetalles"></div>
+            <!-- <label for="childrenAge">Edad del niño:</label>
+            <input type="number" id="childrenAge" name="childrenAge" min="0" value="1">
+ -->
             <label for="clase">Clase:</label>
             <select id="clase" name="clase">
-                <option value="economica">Económica</option>
+                <option value="economica">Turista</option>
                 <option value="business">Business Class</option>
                 <option value="primera">Primera Clase</option>
             </select>
@@ -89,7 +89,7 @@
         </form>
 
         <div id="opcionesVuelos" class="oculto">
-            <h2>Opciones de Vuelos</h2>
+            <h2 id="text-resultado">Opciones de Vuelos</h2>
             <div id="resultados"></div>
         </div>
     </div>
