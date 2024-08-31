@@ -1,7 +1,7 @@
 const tipoViaje = document.getElementById("tipoViaje");
 const buscarVuelos = document.getElementById("buscarVuelos");
 
-tipoViaje.addEventListener("change", () => {
+document.getElementById("tipoViaje").addEventListener("change", function () {
   const fechaVuelta = document.getElementById("fechaVuelta");
   if (this.value === "idavuelta") {
     fechaVuelta.disabled = false;
@@ -11,11 +11,26 @@ tipoViaje.addEventListener("change", () => {
   }
 });
 
+//Inicio Codigo #1: realizado por Jose Rejas
+const ninos = document.getElementById("childrens");
+const ninosDetalles = document.getElementById("ninosDetalles");
+const pasajeros = document.getElementById("pasajeros");
+
+let totalPasajeros = parseInt(ninos.value) + parseInt(pasajeros.value); //JR
+const textResultados = document.getElementById("text-resultado");
+if (totalPasajeros > 7) {
+  //JR
+  document.getElementById("opcionesVuelos").style.display = "block";
+  document.getElementById("opcionesVuelos").style.color = "red";
+
+  textResultados.innerHTML = "A sobrepasado el máximo de 7 pasajes por usuario";
+}
+
 buscarVuelos.addEventListener("click", function () {
   const destino = document.getElementById("destino").value.toLowerCase();
   const origen = document.getElementById("origen").value.toLowerCase(); //JR
   const resultados = document.getElementById("resultados");
-  const opcionesVuelos = document.getElementById("opcionesVuelos")
+  const opcionesVuelos = document.getElementById("opcionesVuelos");
   resultados.innerHTML = "";
 
   //Codigo #2 Jose Rejas
@@ -34,7 +49,8 @@ buscarVuelos.addEventListener("click", function () {
     opcionesVuelos.style.display = "block";
     opcionesVuelos.style.color = "red";
 
-    textResultados.innerHTML = "A sobrepasado el máximo de 7 pasajes por usuario"; //JR
+    textResultados.innerHTML =
+      "A sobrepasado el máximo de 7 pasajes por usuario"; //JR
   } else {
     //JR
     vuelos.forEach((vuelo) => {
@@ -69,7 +85,7 @@ function obtenerFechaActual() {
   const year = hoy.getFullYear();
   const mes = String(hoy.getMonth() + 1).padStart(2, "0");
   const día = String(hoy.getDate()).padStart(2, "0");
-  return `${year}-${mes}-${día}`; 
+  return `${year}-${mes}-${día}`;
 }
 
 function formatearFecha(fecha) {
@@ -97,26 +113,24 @@ ninos.addEventListener("blur", function () {
 
 // yanira
 const fechaMinima = obtenerFechaActual();
-const fechaIda = document.getElementById("fechaIda")
-const fechaVuelta = document.getElementById("fechaVuelta")
+const fechaIda = document.getElementById("fechaIda");
+const fechaVuelta = document.getElementById("fechaVuelta");
 fechaIda.min = fechaMinima;
 fechaVuelta.min = fechaMinima;
 
-//Inicio Codigo #1: realizado por Jose Rejas
-const ninos = document.getElementById("childrens");
-const ninosDetalles = document.getElementById("ninosDetalles");
-const pasajeros = document.getElementById("pasajeros");
-
-let totalPasajeros = parseInt(ninos.value) + parseInt(pasajeros.value); //JR
-const textResultados = document.getElementById("text-resultado");
-if (totalPasajeros > 7) {
-  //JR
-  document.getElementById("opcionesVuelos").style.display = "block";
-  document.getElementById("opcionesVuelos").style.color = "red";
-
-  textResultados.innerHTML = "A sobrepasado el máximo de 7 pasajes por usuario";
+function sumarUnDia(fechaString) {  
+  const fecha = new Date(fechaString);
+  fecha.setDate(fecha.getDate() + 1);
+  return fecha.toISOString().split("T")[0];
 }
-
+// leonardo
+fechaIda.addEventListener("change", () => {
+  console.log(fechaIda.value);
+  const resultado = sumarUnDia(fechaIda.value);
+  fechaVuelta.min = resultado
+  console.log(resultado);
+  console.log(fechaVuelta);
+});
 
 //Termino codigo #1: Jose Rejas
 const vuelos = [
@@ -825,3 +839,15 @@ const vuelos = [
     numeroVuelo: "EK33000",
   },
 ];
+
+// leonardo - listado destinos origen
+const origenes = document.querySelector("#origen");
+const destinos = document.querySelector("#destino");
+const vuelosOrigen = new Set(vuelos.map((v) => v.origen));
+const vuelosDestino = new Set(vuelos.map((v) => v.destino));
+origenes.innerHTML = Array.from(vuelosOrigen).map(
+  (vo) => `<option value="${vo}">${vo}</option>`
+);
+destinos.innerHTML = Array.from(vuelosDestino).map(
+  (vd) => `<option value="${vd}">${vd}</option>`
+);
