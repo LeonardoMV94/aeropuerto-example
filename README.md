@@ -1,7 +1,12 @@
 ## Proyecto pagina web de Aerolinea
 
+<<<<<<< HEAD
 - [Francisco]            Carrousel de imagenes :white_check_mark: , mejorar mas sobre :white_check_mark:
 - [Jose]                 Validacion de niños y pasajeros, integrar array de jose
+=======
+- [Francisco]            Carrousel de imagenes (fix), mejorar mas sobre
+:x: [Jose]                 Validacion de niños y pasajeros, integrar array de jose
+>>>>>>> main
 - [Simone]               Refactorizar css
 - [Yarira]               listado destino - origen from array
 - [Nicolas]              Estilo de destinos :white_check_mark:
