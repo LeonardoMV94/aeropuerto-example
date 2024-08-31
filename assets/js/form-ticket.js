@@ -93,7 +93,7 @@ function formatearFecha(fecha) {
   return `${partes[2]}/${partes[1]}/${partes[0]}`;
 }
 
-ninos.addEventListener("blur", function () {
+document.getElementById("childrens").addEventListener("blur", function () {
   ninosDetalles.innerHTML = "";
   if (ninos.value > 0) {
     for (i = 1; i <= ninos.value; i++) {
@@ -851,3 +851,10 @@ origenes.innerHTML = Array.from(vuelosOrigen).map(
 destinos.innerHTML = Array.from(vuelosDestino).map(
   (vd) => `<option value="${vd}">${vd}</option>`
 );
+
+// origenes.addEventListener('change', () => {
+//   // lista filtrada
+//   const destinosFiltrado = Array.from(vuelosDestino).filter(vd => vd != vuelosDestino.value)
+//   destinosFiltrado.map((vd) => destinos.appendChild(`<option value="${vd}">${vd}</option>`));
+  
+// })
