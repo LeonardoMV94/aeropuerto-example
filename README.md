@@ -3,7 +3,7 @@
 - [Francisco]            Carrousel de imagenes :white_check_mark: , mejorar mas sobre :white_check_mark:
 - [Jose]                 Validacion de niños y pasajeros, integrar array de jose :white_check_mark:
 - [Simone]               Refactorizar css
-- [Yarira]               listado destino - origen from array
+- [Yarira]               listado destino - origen from array :white_check_mark:
 - [Nicolas]              Estilo de destinos :white_check_mark:
 - [Leonardo]             Pull request -  validar formulario contacto :white_check_mark:
 
