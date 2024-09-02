@@ -52,24 +52,24 @@
 
         <form id="contactForm" action="#" method="post">
             <div class="input-group mb-3 row justify-content-center">
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">Nombre </span>
-                    <input type="text" class="form-control" id="username" placeholder="Nombre" aria-label="Username"
+                <div class="input-group mb-3 row">
+                    <span class="input-group-text col-1 col-md-2" id="basic-addon1">Nombre </span>
+                    <input type="text" class="form-control col-11 col-md-10" id="username" placeholder="Nombre" aria-label="Username"
                         aria-describedby="basic-addon1" required>
                 </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">Teléfono</span>
-                    <input type="number" id="telefono" class="form-control" placeholder="Teléfono" aria-label="Teléfono"
+                <div class="input-group mb-3 row">
+                    <span class="input-group-text col-1 col-md-2" id="basic-addon1">Teléfono</span>
+                    <input type="number" id="telefono" class="form-control col-11 col-md-10" placeholder="Teléfono" aria-label="Teléfono"
                         aria-describedby="basic-addon1" required>
                 </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">Email</span>
-                    <input type="email" id="email" class="form-control" placeholder="Email" aria-label="Email"
+                <div class="input-group mb-3 row">
+                    <span class="input-group-text col-1 col-md-2" id="basic-addon1">Email</span>
+                    <input type="email" id="email" class="form-control col-11 col-md-10" placeholder="Email" aria-label="Email"
                         aria-describedby="basic-addon1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-text">Mensaje</span>
-                    <textarea class="form-control" id="message" placeholder="Escribe tu mensaje"
+                <div class="input-group row">
+                    <span class="input-group-text col-1 col-md-2">Mensaje</span>
+                    <textarea class="form-control col-11 col-md-10" id="message" placeholder="Escribe tu mensaje"
                         aria-label="With textarea" required></textarea>
                 </div>
             </div>
@@ -86,7 +86,7 @@
 
             <!-- Submit button -->
             <div>
-                <button id="btnEnviar" type="submit" class="btn btn-primary" disabled>Enviar datos</button>
+                <button id="btnEnviar" type="submit" class="btn btn-primary col-2" disabled>Enviar</button>
             </div>
         </form>
 
