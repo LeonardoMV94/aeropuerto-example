@@ -13,130 +13,22 @@ body {
 
 .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.5);
+    /* margin-left: auto; /* Alinea el botón a la derecha */
+    /* Ajusta la posición vertical del botón si es necesario */
+    /* top: 10px;  */ */
 }
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* Footer */
-footer {
-    background-color: rgb(16, 0, 79);
-    color: #fff;
-    padding: 50px 0 30px 0;
-    text-align: center;
-    position: relative;
-    width: 100%;
-}
 
-footer .redes {
-    margin-bottom: 20px;
-}
-
-footer .redes a {
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 5px;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-footer .arriba {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #d01e11;
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -25px;
-    border-radius: 50%;
-    line-height: 50px;
-    font-size: 18px;
-}
-
-/* Banner */
-.custom-card {
-    background-color: #007bff;
-    color: white;
-}
-
-.custom-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.25rem;
-}
-
-.responsive-img {
-    width: 100%;
-    height: auto;
-    max-height: 200px; 
-    object-fit: cover;
-}
-
-
-/* Header */
-header {
-    background-color: #f8f9fa;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Link Container */
-.link {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Navbar Styles */
-.nav- {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nombre {
-    font-size: 24px;
-    font-weight: bold;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.nav {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-link {
-    color: #343a40;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.nav-link:hover {
-    color: white;
-}
-
-.nav-item {
-    list-style: none;
-}
-
+/* Página Inicio */
 /* Section */
 section {
-    padding: 30px 0;
+    /* padding: 30px 0; */
     color: #ffffff;
-    margin: 50px;
+    /* margin: 50px;  mucho espacio*/
     border-bottom: 100%;
 }
 
@@ -237,10 +129,9 @@ section {
     display: none;
 }
 
-
 /* Carousel */
 .carousel-container {
-    max-width: 900px;
+    /* max-width: 900px;  se veia muy chico */
     margin: 0 auto;
     position: relative;
     background-color: #ffffff;
@@ -310,28 +201,209 @@ section {
     }
 }
 
-/* Form Container */
-.form-container {
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    background-color: #ffffff;
+/* Banner */
+.custom-card {
+    background-color: #007bff;
+    color: white;
 }
 
-/* Tabs and Forms */
-.tab-content {
-    margin-top: 1rem;
+.custom-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
 }
 
-.form-select,
-.form-control {
-    color: #051B54;
+.responsive-img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; 
+    object-fit: cover;
 }
 
-/* Links */
-.compra-link {
-    color: #0099cc;
-    margin-top: 1rem;
+
+/* Página Formulario */
+
+/* Establece la altura mínima para los inputs y los spans */
+.input-group-text, .form-control {
+    height: 45px; 
+    display: flex;
+    align-items: center;
+    box-sizing: border-box; 
+}
+
+textarea.form-control {
+    height: 90px; /* Altura mayor por defecto */
+    min-height: 90px; /* Evita que sea más pequeño que los inputs */
+    resize: vertical; /* Permite al usuario cambiar la altura si es necesario */
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h1 {
+    font-size: 2.5em;
+    color: #003366; 
+    margin: 0;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #003366; 
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.section-title i {
+    margin-right: 10px;
+    color: #007BFF; 
+}
+
+.section-divider {
+    border: 1px solid #007BFF; 
+    margin: 10px 0;
+}
+
+.section-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333; 
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5em;
+    }
+    
+    .section-content {
+        padding: 15px;
+    }
+}
+
+
+/* Página Compra tickets */
+/* Labels and Form Elements */
+label {
     display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+/* porfin ctm alabado sea scope */
+@scope (#compra-ticket-main){
+    input, select, button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
 }
 
+
+/* Buttons */
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* button:hover {
+    background-color: #0056b3;
+} */
+
+/* .btn-danger {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+} */
+
+/* Hidden Elements */
+.oculto {
+    display: none;
+}
+
+/* Flight Options */
+#opcionesVuelos {
+    margin-top: 20px;
+}
+
+.vuelo {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vuelo img {
+    width: 50px;
+    height: auto;
+}
+
+.vuelo-info {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.vuelo-precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(16, 0, 79);
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .redes {
+    margin-bottom: 20px;
+}
+
+footer .redes a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #d01e11;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
